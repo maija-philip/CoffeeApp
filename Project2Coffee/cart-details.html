@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Maija Philip 
+    4/3/2023
+    ISTE 252 - Foundations of Mobile Design
+-->
+<head>
+
+	<!-- My Logo for the Tab -->
+	<link rel="icon" type="image/png" href="assets/media/logo192.png">
+
+	<!-- My Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- My Javascript -->
+	<script src="assets/js/menu.json" defer></script>
+    <script src="assets/js/localStorage.js" defer></script>
+    <script src="assets/js/customize.js" defer></script>
+	<script src="assets/js/engine.js" defer></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cart | Coffee App</title>
+
+</head>
+<body onload="startCart()">
+    <!-- Page Title and Back Arrow -->
+    <header>
+        <button onclick="location.href = 'menu.html'" class="back-arrow">
+            <img src="assets/media/Material_Arrow.svg" alt="material back arrow">
+        </button>
+        <h2>My Basket</h2>
+    </header>
+
+    <!-- Main Site Content -->
+    <main>
+        <div id="cartContent">
+            <!-- cart content will be displayed dynamically with javascript -->
+        </div>
+
+        <div id="checkoutInfo">
+            <!-- checkout info will be displyed dynamically with javascript -->
+        </div>
+    </main>
+
+
+    <!-- bottom of the page button to move on -->
+    <div class="bottom">
+        <a class="button" href="menu.html" id="checkoutBtn" onclick="localStorage.setItem('cart', '[]')">Checkout $0.00</a>
+    </div>
+
+    <!-- footer -->
+	<footer>
+        <p>Made by Maija Philip &copy; 2023, Designed by Maija, Blanka, and Gavin</p>
+	</footer>
+</body>
+</html>

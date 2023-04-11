@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Maija Philip 
+    4/3/2023
+    ISTE 252 - Foundations of Mobile Design
+-->
+<head>
+
+	<!-- My Logo for the Tab -->
+	<link rel="icon" type="image/png" href="assets/media/logo192.png">
+
+	<!-- My Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- My Javascript -->
+	<script src="assets/js/menu.json" defer></script>
+    <script src="assets/js/localStorage.js" defer></script>
+    <script src="assets/js/customize.js" defer></script>
+	<script src="assets/js/engine.js" defer></script>
+    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu | Coffee App</title>
+
+</head>
+<body onload="setUpCustomize()">
+   <!-- Page Title and Back Arrow -->
+   <header>
+        <button onclick="history.back()" class="back-arrow">
+            <img src="assets/media/Material_Arrow.svg" alt="material back arrow">
+        </button>
+        <h2>Customize</h2>
+    </header>
+
+    <!-- Main Site Content -->
+    <main>
+        <!-- Size -->
+        <div class="optionButtons">
+            <h2>Size</h2>
+            <div class="btnBlock" id="size">
+                <figure onclick="selectOption(this)">
+                    <div class="normal"><img src="assets/media/Blanka_Cappuccino.svg"></div>
+                    <figcaption>Normal</figcaption>
+                </figure>
+    
+                <figure onclick="selectOption(this)">
+                    <div class="grande"><img src="assets/media/Blanka_Cappuccino.svg"></div>
+                    <figcaption>Grande<br>+ $1.50</figcaption>
+                </figure>
+    
+                <figure onclick="selectOption(this)">
+                    <div><img src="assets/media/Blanka_Cappuccino.svg"></div>
+                    <figcaption>Gigante<br>+ $2.00</figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+        <!-- Milk -->
+        <div class="selectBtns">
+            <h2>Milk</h2>
+            <fieldset id="milk">
+                <label for="whole">
+                    <input type="radio" id="whole" name="milk" value="whole">
+                    <span class="radio_custom"></span>Whole</label><br>
+
+                <label for="2percent">
+                    <input type="radio" id="2percent" name="milk" value="2percent">
+                    <span class="radio_custom"></span>2&#37;</label><br>
+                
+                <label for="skim">
+                    <input type="radio" id="skim" name="milk" value="skim">
+                    <span class="radio_custom"></span>Skim</label><br>
+                
+                <label for="lactoseFree">
+                    <input type="radio" id="lactoseFree" name="milk" value="lactoseFree">
+                    <span class="radio_custom"></span>Lactose Free</label><br>
+
+                <label for="almond">
+                    <input type="radio" id="almond" name="milk" value="almond">
+                    <span class="radio_custom"></span>Almond</label><br>
+                
+                <label for="oat">
+                    <input type="radio" id="oat" name="milk" value="oat">
+                    <span class="radio_custom"></span>Oat</label><br>
+
+            </fieldset>
+        </div>
+
+        <!-- Sweetener -->
+        <div class="selectBtns">
+            <h2>Sweetener</h2>
+            <input type="range" name="rating" min="0" max="5" step="1" id="sweetener">
+            <div class="sweetenerLabel">
+                <p>0tsp</p>
+                <p>1tsp</p>
+                <p>2tsp</p>
+                <p>3tsp</p>
+                <p>4tsp</p>
+                <p>5tsp</p>
+            </div>
+        </div>  
+        
+        <!-- Temperature -->
+        <div class="optionButtons">
+            <h2>Temperature</h2>
+            <div class="btnBlock" id="termperature">
+                <figure onclick="selectOption(this)">
+                    <div><img src="assets/media/Blanka_Cappuccino_Iced.svg"></div>
+                    <figcaption>Iced</figcaption>
+                </figure>
+    
+                <figure onclick="selectOption(this)">
+                    <div><img src="assets/media/Blanka_Cappuccino.svg"></div>
+                    <figcaption>Warm</figcaption>
+                </figure>
+    
+                <figure onclick="selectOption(this)">
+                    <div><img src="assets/media/Blanka_Cappuccino_Hot.svg"></div>
+                    <figcaption>Hot</figcaption>
+                </figure>
+            </div>
+        </div>
+
+         <!-- Shots -->
+         <div class="selectBtns" id="shotsBlock">
+            <h2>Shots</h2>
+            <fieldset>
+                <label for="decaf">
+                    <input type="radio" id="decaf" name="decaf" value="decaf">
+                    <span class="radio_custom"></span>Decaf</label><br>
+            </fieldset>
+            <input type="range" name="rating" min="0" max="3" step="1" id="shots">
+            <div class="sweetenerLabel">
+                <p>0</p>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+        </div>  
+
+        <!-- Add Ons -->
+        <div class="optionButtons">
+            <h2>Add Ons</h2>
+            <div class="btnBlock" id="addOns">
+                <figure onclick="selectOptionAddOn(this)">
+                    <div><img src="assets/media/Blanka_WhippedCream.svg"></div>
+                    <figcaption>Whipped Cream</figcaption>
+                </figure>
+    
+                <figure onclick="selectOptionAddOn(this)">
+                    <div><img src="assets/media/Blanka_Cinnamon.svg"></div>
+                    <figcaption>Cinnamon</figcaption>
+                </figure>
+    
+                <figure onclick="selectOptionAddOn(this)">
+                    <div><img src="assets/media/Blanka_Marshmallows.svg"></div>
+                    <figcaption>Marshmallows</figcaption>
+                </figure>
+
+                <figure onclick="selectOptionAddOn(this)">
+                    <div><img src="assets/media/Blanka_Chocolate.svg"></div>
+                    <figcaption>Chocolate Flavor</figcaption>
+                </figure>
+    
+                <figure onclick="selectOptionAddOn(this)">
+                    <div><img src="assets/media/Blanka_Vanilla.svg"></div>
+                    <figcaption>Vanilla Flavor</figcaption>
+                </figure>
+    
+                <figure onclick="selectOptionAddOn(this)">
+                    <div><img src="assets/media/Blanka_Carmel.svg"></div>
+                    <figcaption>Caramel Flavor</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="quantityBlock">
+            <h2>Quantity</h2>
+            <div class="quantity" id="quantcust"><p><span onclick="changeCustomizeQuantity(this, false)">-</span>1<span onclick="changeCustomizeQuantity(this, true)">+</span></p></div>
+        </div> 
+    </main>
+
+    <!-- bottom of the page button to move on -->
+    <div class="bottom">
+        <a class="button" onclick="addToCart()">Cart</a>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>Made by Maija Philip &copy; 2023, Designed by Maija, Blanka, and Gavin</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[
+    {
+        "image": "Blanka_Brewed.svg",
+        "alt": "Brewed Coffee Icon",
+        "name": "Brewed",
+        "desc": "Our traditionally brewed roasted coffee",
+        "price": "$1.50"
+    },
+
+    {
+        "image": "Blanka_Espresso.svg",
+        "alt": "Espresso Coffee Icon",
+        "name": "Espresso",
+        "desc": "A strong, flavorful drink from high quality beans",
+        "price": "$1.75"
+    },
+
+    {
+        "image": "Blanka_Cappuccino.svg",
+        "alt": "Cappuccino Coffee Icon",
+        "name": "Cappuccino",
+        "desc": "A smooth and creamy delicacy",
+        "price": "$2.00"
+    }
+]

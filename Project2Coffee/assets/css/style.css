@@ -1,0 +1,365 @@
+/* import Roboto 400, Roboto 700, and Bebas Neue 400 Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+/* creating my color variables */
+:root {
+    --white: #FFFBFF;
+    --background: #FFEDE9;
+    --theme-pink: #E6B6AC;
+    --theme-brown: #3E0500;
+    --grey: #49454F;
+    --black: #432423;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--background);
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* Text formatting */
+p, a, figcaption, input, button, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: var(--black);
+}
+.grey {color: var(--grey);}
+
+a {transition: all 0.25s linear;}
+a:hover {color: var(--grey);}
+
+.details {
+  color: var(--grey);
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Buttons */
+.back-arrow {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  height: 3.8em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.back-arrow:hover {
+  border-bottom: 2px solid var(--theme-brown);
+  background: transparent;
+  box-shadow: none;
+}
+.back-arrow img {
+  width: 100%;
+  height: 100%;
+}
+
+button, .button {
+  background-color: var(--theme-brown);
+  color: var(--white);
+  border-radius: 2em;
+  border: none;
+  padding: 1em 3em;
+  font-size: 1.1em;
+  text-decoration: none;
+  margin: 1em;
+}
+button:hover, .button:hover {
+  background-color: var(--white);
+  color: var(--theme-brown);
+  box-shadow:  0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bottom {
+  text-align: center;
+  width: 100%;
+  margin-bottom: -2em;
+}
+
+/* Footer and Header */
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 3.8em;
+  background-color: var(--theme-pink);
+  position: fixed;
+  top: 0;
+}
+
+footer {
+  margin-top: 2em;
+  width: 100vw;
+  padding: 1.2em;
+  text-align: center;
+}
+
+/* Main Styles */
+main {
+  margin-top: 4.8em;
+  min-height: calc(100vh - 12em);
+  text-align: center;
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 8em);
+}
+
+#home div {
+  width: 80%;
+  text-align: center;
+}
+
+#home img {
+  width: 50%;
+  margin: 1em auto 3em auto;
+}
+
+#myBasket::after {
+  content: attr(data-value);
+  display: inline-block;
+  color: var(--black);
+  background-color: var(--theme-pink);
+  border-radius:50%;
+  padding: 0.5em 0.8em;
+  position:relative;
+  right: -3.2em;
+  top:-1.3em;
+}
+
+/* Cards */
+.card {
+  width: 95vw;
+  height: auto;
+  padding: 1em;
+  margin: 1em auto;
+
+  text-align: left;
+  background-color: var(--white);
+
+  display: grid;
+  grid-template-columns: 27% 67%;
+  column-gap: 3%;
+}
+.card h3, .card p {
+  margin: 0.5em;
+}
+
+.cart-card {
+  grid-template-columns: 17% 57% 17%;
+  column-gap: 3%;
+}
+.cart-card .price {
+  text-align: right;
+}
+.cart-card .quantity {
+  text-align: center;
+  margin: auto;
+}
+.cart-card .icon{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+#checkoutInfo {
+  text-align: right;
+  width: 90%;
+  margin: auto;
+}
+
+/* Customize */
+.optionButtons, .selectBtns, .quantityBlock {
+  width: 90%;
+  margin: 1em auto 2em auto;
+  text-align: left;
+}
+
+.btnBlock {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 5%;
+  row-gap: 3em;
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+figure div {
+  background-color: var(--white);
+  width: 100%;
+  height: 85%;
+  margin: auto;
+  margin-bottom: 0.5em;
+  text-align: center;
+  display: flex;
+  justify-content: end;
+}
+
+.normal img {
+  width: 60%;
+  height: 60%;
+  margin: auto;
+}
+.grande img {
+  width: 75%;
+  height: 75%;
+  margin: auto;
+}
+figure img {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+fieldset, input {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom input from https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--background);
+  margin: 0.5em;
+
+  font: inherit;
+  color: var(--black);
+  width: 1.3em;
+  height: 1.3em;
+  border: 0.15em solid var(--black);
+  border-radius: 50%;
+  transform: translateY(0.2em);
+
+  display: inline-grid;
+  display: -ms-inline-grid;
+  display: -moz-inline-grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+/* end of custom input */
+
+/* making the custom slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 0.25em;
+  margin: 1em;
+  background: var(--theme-pink);
+  outline: none;
+  border:none;
+  border-bottom: 2px solid var(--theme-pink);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  background: var(--black);
+  border-radius: 1em;
+  cursor: pointer;
+  transform: translateY(0.1em);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 1.2em;
+  height: 1.2em;
+  background: var(--black);
+  border-radius: 1em;
+  cursor: pointer;
+  transform: translateY(0.1em);
+}
+/* end of custom slider */
+
+.sweetenerLabel {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.quantityBlock {
+  margin: 4em auto;
+  display: flex;
+}
+.quantityBlock .quantity {
+  text-align: right;
+  width: 90%;
+}
+.quantity {
+  font-size: 1.1em;
+}
+.quantity span {
+  padding: 1em;
+}
+
+
+/* Media Queries */
+
+/* when the page is greater than 800px... */
+@media screen and (min-width: 800px) {
+    
+  
+
+  }
